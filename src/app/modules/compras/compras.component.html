@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Compras
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngFor="let dat of data">
+    <ion-list-header color="primary">
+      <ion-label>{{ dat.categoria }}</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let dats of dat.contenido">
+      <ion-label>{{ dats.name }}&nbsp;&nbsp;&nbsp;
+        <ion-badge class="top-small-marign" *ngIf="dats.maximo" mode="ios" [color]="dats.color">{{ dats.cantidad }} {{ dats.unidad }}</ion-badge>
+        <ion-range [(ngModel)]="dats.cantidad" [value]="dats.cantidad" mode="ios" [snaps]="dats.maximo != null" min="0" [max]="dats.maximo == null ? 100 : dats.maximo" step="1">
+          <ion-icon slot="start" name="battery-dead-outline"></ion-icon>
+          <ion-icon slot="end" name="battery-full-outline"></ion-icon>
+        </ion-range>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="add-outline"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="start">
+    <ion-fab-button class="addicion">
+      Categoría
+    </ion-fab-button>
+    <ion-fab-button class="addicion">
+      Compra
+    </ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
