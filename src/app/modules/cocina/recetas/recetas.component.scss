@@ -1,0 +1,83 @@
+.custom-header{
+    padding: 0px;
+    position: relative;
+    margin-bottom: 0px;
+}
+
+.header-image{
+    width: 100%;
+    z-index: 1000;
+}
+
+.drop-button{
+    border-radius: 100% !important;
+    position: absolute;
+    bottom: 1vw;
+    right: 1vw;
+    z-index: 1001;
+}
+
+.info-conteriner{
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    width: 45vw;
+    height: 100%;
+}
+
+.title{
+    background-color: var(--ion-color-primary);
+    padding: 2vw;
+    text-align: center;
+}
+
+.title>h3{
+    margin: 0px;
+    padding: 0px;
+    color: snow;
+}
+
+.sub-title{
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    padding-left: 2vw;
+    padding-right: 2vw;
+    overflow-y: scroll;
+    border-radius: 2vw;
+    height: 60%;
+}
+
+.badges{
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    height: 100%;
+}
+
+.badges>ion-badge{
+    margin-right: 1vw;
+}
+
+.rating{
+    background-color: var(--ion-color-primary);
+    border-radius: 2vw;
+    padding-bottom: 1vw;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    position: absolute;
+    bottom: 2vw;
+    left: 1vw;
+}
+
+.rating>h4{
+    padding: 0px;
+    margin: 0px;
+    color: snow;
+}
+
+ion-card-content{
+    padding: 0px;
+}
+
+.descripcion{
+    padding: 2vw;
+}

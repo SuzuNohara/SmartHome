@@ -13,8 +13,8 @@
     </ion-list-header>
     <ion-item *ngFor="let dats of dat.contenido">
       <ion-label>{{ dats.name }}&nbsp;&nbsp;&nbsp;
-        <ion-badge class="top-small-marign" *ngIf="dats.maximo" mode="ios" [color]="dats.color">{{ dats.cantidad }} {{ dats.unidad }}</ion-badge>
-        <ion-range [(ngModel)]="dats.cantidad" [value]="dats.cantidad" mode="ios" [snaps]="dats.maximo != null" min="0" [max]="dats.maximo == null ? 100 : dats.maximo" step="1">
+        <ion-badge class="top-small-marign" *ngIf="dats.maximo" [color]="dats.color">{{ dats.cantidad }} {{ dats.unidad }}</ion-badge>
+        <ion-range [(ngModel)]="dats.cantidad" [value]="dats.cantidad" [snaps]="dats.maximo != null" min="0" [max]="dats.maximo == null ? 100 : dats.maximo" step="1">
           <ion-icon slot="start" name="battery-dead-outline"></ion-icon>
           <ion-icon slot="end" name="battery-full-outline"></ion-icon>
         </ion-range>

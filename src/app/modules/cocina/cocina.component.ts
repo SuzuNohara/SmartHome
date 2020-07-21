@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RoutingService } from 'src/app/services/utils/routing.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-cocina',
@@ -7,8 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CocinaComponent implements OnInit {
 
-  constructor() { }
+  public options = environment.cocinaFunctions;
+
+  constructor(private routing: RoutingService) { }
 
   ngOnInit() {}
+
+  public navigateBack(){
+    this.routing.goTo('home');
+  }
 
 }

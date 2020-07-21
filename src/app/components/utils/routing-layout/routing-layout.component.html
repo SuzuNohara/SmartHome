@@ -1,0 +1,16 @@
+<ion-grid>
+  <ion-row>
+    <ion-col *ngFor="let option of options">
+      <ion-card color="primary" (click)="goTo(option.route)">
+        <ion-card-header>
+          <ion-card-subtitle class="center">{{ option.name }}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <div class="big-icon">
+            <ion-icon [name]="option.icon"></ion-icon>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
