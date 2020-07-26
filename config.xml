@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.suzu.cloudware.smarthome" version="0.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>SmartHome</name>
+    <name>Smart Home</name>
     <description>Smart Home app.</description>
-    <author email="suzu.nkdca@gmail.com" href="http://ionicframework.com/">SuzuNohara</author>
+    <author email="suzu.nkdca@gmail.com" href="https://smarthome-284201.firebaseapp.com/">SuzuNohara</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
