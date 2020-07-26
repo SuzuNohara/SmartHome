@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RoutingService } from 'src/app/services/utils/routing.service';
+import { SqlService } from '../../../services/sql.service';
 
 @Component({
   selector: 'app-comida',
@@ -8,9 +9,13 @@ import { RoutingService } from 'src/app/services/utils/routing.service';
 })
 export class ComidaComponent implements OnInit {
 
-  constructor(private routing: RoutingService) { }
+  constructor(
+    private routing: RoutingService,
+    private sql: SqlService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.sql.initDB();
+  }
 
   navigateBack(){
     this.routing.goTo('cocina');
