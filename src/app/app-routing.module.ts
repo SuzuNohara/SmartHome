@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/cocina/cocina.module').then( m => m.CocinaModule)
   },
   {
+    path: 'lavanderia',
+    loadChildren: () => import('./modules/lavanderia/lavanderia.module').then( m => m.LavanderiaModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
