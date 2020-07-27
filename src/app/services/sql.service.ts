@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
+import { File } from '@ionic-native/file/ngx';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -9,18 +10,22 @@ export class SqlService {
 
   private conn: SQLiteObject;
 
-  constructor(private sqlite: SQLite) {
+  constructor(private sqlite: SQLite, private file: File) {
     this.conn = null;
   }
 
   public initDB(){
-    this.sqlite.create(environment.dbConnection).then((db: SQLiteObject) => {
+    this.sqlite.create({
+      name: environment.dbConnection.name,
+      location: this.file.externalDataDirectory,
+      key: environment.dbConnection.key
+    }).then((db: SQLiteObject) => {
       this.conn = db;
       this.createTables();
       console.log('base de datos creada');
     }).catch( e => {
       this.conn = null;
-      console.log('Error al crear la base de datos');
+      console.log('Error al crear la base de datos::', e);
     });
   }
 
