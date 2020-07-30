@@ -10,7 +10,9 @@ import { NgForm } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
 
-  f: NgForm;
+  public email: string;
+  public password: string;
+  public terms: boolean;
 
   public backRoute: string;
 
@@ -21,16 +23,15 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
-  public register(f: NgForm){
-    console.log(f.value.email);
-    console.log(f.value.password);
-    console.log(f.value.pass);
-    console.log(f.value.terms);
-    let usuario = this.auth.register(f.value.email, f.value.password);
-    console.log(usuario);
-    let usss = this.auth.login(f.value.email, f.value.password);
-    console.log(usss);
-    console.log(this.auth.checkSession());
+  public register(){
+    if(this.terms){
+      //if()
+      let usuario = this.auth.register(this.email, this.password);
+      console.log(usuario);
+    }else{
+      this.alert.presentAlert('Error', 'No has aceptado los términos y condiciones', 'Acepta los térmionos y condiciones para continuar', ['OK']);
+    }
+    //let usss = this.auth.login(f.value.email, f.value.password);
   }
 
 }

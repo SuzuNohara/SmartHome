@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
     public routing: RoutingService,
     public auth: AuthService,
     public actions: ActionSheetController){
-    this.showBack = true;//this.route != null && this.route != undefined;
+    this.showBack = this.route != null && this.route != undefined;
   }
 
   async ngOnInit() {}

@@ -11,7 +11,7 @@
 
 .back-button-div{
     z-index: 99999;
-    background-color: rgba($color: #000000, $alpha: 0.6);
+    background-color: rgba($color: #000000, $alpha: 0.4);
     color: #ffffff;
     position: fixed;
     top: 2vw;
@@ -25,7 +25,7 @@
 
 .options-button-div{
     z-index: 99999;
-    background-color: rgba($color: #000000, $alpha: 0.6);
+    background-color: rgba($color: #000000, $alpha: 0.4);
     color: #ffffff;
     position: fixed;
     top: 2vw;
@@ -40,12 +40,13 @@
 .header-user{
     max-width: 76vw;
     margin-left: 12vw;
-    background-color: rgba($color: #000000, $alpha: 0.6);
+    background-color: rgba($color: #000000, $alpha: 0.4);
     height: 8vw;
     margin-top: 2vw;
     border-radius: 4vw;
     padding-left: 1vw;
     padding-right: 3vw;
+    color: #ffffff;
 }
 
 .header-avatar{
@@ -62,5 +63,17 @@
 }
 
 .header-actions{
-    background-color: rgba($color: #000000, $alpha: 0.6) !important;
+    background-color: rgba($color: #000000, $alpha: 0.4) !important;
+}
+
+.action-sheet .action-sheet-md .action-sheet-group .button-inner {
+    background-color: rgba($color: #000000, $alpha: 0.4) !important;
+}
+
+.action-sheet-group.sc-ion-action-sheet-md{
+    background: rgba($color: #000000, $alpha: 0.4) !important;
+}
+
+.sc-ion-action-sheet-md.sc-ion-action-sheet-md-h{
+    background: rgba($color: #000000, $alpha: 0.4) !important;
 }

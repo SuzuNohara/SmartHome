@@ -1,27 +1,23 @@
 <ion-content>
-  <br><br>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle class="text-center">Smart Home</ion-card-subtitle>
-      <ion-card-title class="text-center">Registro</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <form #f="ngForm" (ngSubmit)="register(f)">
-        <ion-input name="email" ngModel required #email="ngModel" placeholder="Email" type="email"></ion-input>
+  <div class="content">
+    <h2>Smart Home</h2>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle class="text-center">Registro</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-input [(ngModel)]="email" placeholder="Email" type="email"></ion-input>
         <br>
-        <ion-input name="password" ngModel required #password="ngModel" placeholder="Contraseña" type="password"></ion-input>
-        <br>
-        <ion-input name="pass" ngModel required #pass="ngModel" placeholder="Repetir contraseña" type="password"></ion-input>
+        <ion-input [(ngModel)]="password" placeholder="Contraseña" type="password"></ion-input>
         <br>
         <ion-item>
-          <ion-checkbox name="terms" ngModel required #terms="ngModel" slot="start" checked="false"></ion-checkbox>
+        <ion-checkbox [(ngModel)]="terms" slot="start" checked="false"></ion-checkbox>
           <ion-label>
-            <p>Hacepto los términos y condiciones</p>
+            <p>Acepto los términos y condiciones</p>
           </ion-label>
         </ion-item>
-        <ion-button expand="block" type="submit">Registro</ion-button>
-      </form>
-    </ion-card-content>
-  </ion-card>
-  <app-back-button [route]="backRoute"></app-back-button>
+        <ion-button expand="block" (click)="register()">Registro</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
