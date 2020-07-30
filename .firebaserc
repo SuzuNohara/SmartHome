@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "smarthome-284201": {
+      "hosting": {
+        "app": [
+          "smarthome-284201"
+        ]
+      }
+    }
+  }
+}

@@ -6,26 +6,69 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+// components
 import { AppComponent } from './app.component';
-import { SQLite } from '@ionic-native/sqlite/ngx';
-import { File } from '@ionic-native/file/ngx';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { BackButtonComponent } from './components/back-button/back-button.component';
+import { HomePage } from './home/home.page';
+import { ComprasComponent } from './modules/compras/compras.component';
+import { CocinaComponent } from './modules/cocina/cocina.component';
+import { ComidaComponent } from './modules/cocina/comida/comida.component';
+import { HistorialComponent } from './modules/cocina/historial/historial.component';
+import { ListaComponent } from './modules/cocina/lista/lista.component';
+import { RecetasComponent } from './modules/cocina/recetas/recetas.component';
+import { LavanderiaComponent } from './modules/lavanderia/lavanderia.component';
+
+// modules created
+import { RoutingLayoutModule } from './components/utils/routing-layout/routing-layout.module';
+
+// modules external
 import { AppRoutingModule } from './app-routing.module';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { FormsModule } from '@angular/forms';
+
+// environment
+import { environment } from 'src/environments/environment';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent, 
+    RegisterComponent, 
+    LoginComponent,
+    BackButtonComponent,
+    HomePage,
+    ComprasComponent,
+    CocinaComponent,
+    ComidaComponent,
+    HistorialComponent,
+    ListaComponent,
+    RecetasComponent,
+    LavanderiaComponent
+  ],
   entryComponents: [],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    FormsModule,
+    RoutingLayoutModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    SQLite,
-    File
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [
+    LoginComponent, 
+    RegisterComponent, 
+    LoginComponent,
+    BackButtonComponent
+  ]
 })
 export class AppModule {}
