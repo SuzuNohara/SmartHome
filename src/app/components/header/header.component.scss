@@ -1,0 +1,66 @@
+.header-container{
+    position: fixed;
+    height: 4vh;
+    z-index: 99999;
+    text-align: center;
+}
+
+.header-space{
+    height: 4vh;
+}
+
+.back-button-div{
+    z-index: 99999;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    color: #ffffff;
+    position: fixed;
+    top: 2vw;
+    left: 2vw;
+    height: 8vw;
+    width: 8vw;
+    font-size: 6vw;
+    border-radius: 4vw;
+    text-align: center;
+}
+
+.options-button-div{
+    z-index: 99999;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    color: #ffffff;
+    position: fixed;
+    top: 2vw;
+    right: 2vw;
+    height: 8vw;
+    width: 8vw;
+    font-size: 6vw;
+    border-radius: 4vw;
+    text-align: center;
+}
+
+.header-user{
+    max-width: 76vw;
+    margin-left: 12vw;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    height: 8vw;
+    margin-top: 2vw;
+    border-radius: 4vw;
+    padding-left: 1vw;
+    padding-right: 3vw;
+}
+
+.header-avatar{
+    float: left;
+    font-size: 6vw;
+    margin-right: 2vw;
+}
+
+.header-content{
+    float: left;
+    text-align: left;
+    padding-top: 1.4vw;
+    font-size: 3.5vw;
+}
+
+.header-actions{
+    background-color: rgba($color: #000000, $alpha: 0.6) !important;
+}

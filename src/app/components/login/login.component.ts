@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
   }
 
   async ngOnInit() {
-    this.auth.logout();
     let session = await this.auth.checkSession();
     if(session != null && session != undefined){
       console.log('SESSION:: ', session['user']['uid']);
@@ -32,11 +31,6 @@ export class LoginComponent implements OnInit {
     console.log(this.data.email);
     console.log(this.data.password);
     let user = await this.auth.login(this.data.email, this.data.password);
-    let session = await this.auth.checkSession();
-    console.log(session);
-    /*if(user.user.uid != undefined && user.user.uid != null){
-      this.routing.goTo('home');
-    }*/
   }
 
   public register(){

@@ -16,7 +16,11 @@ export class AuthService {
   constructor(private auth: AngularFireAuth, private store: FirestoreService, private route: RoutingService) {
     this.auth.onIdTokenChanged((data)=>{
       console.log('SESSION STATUS CHANGED:: ', data);
-      this.route.goTo('home');
+      if(data == null || data == undefined){
+        this.route.goTo('');
+      }else{
+        this.route.goTo('home');
+      }
     });
   }
 

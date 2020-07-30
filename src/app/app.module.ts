@@ -10,7 +10,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-import { BackButtonComponent } from './components/back-button/back-button.component';
+import { HeaderComponent } from './components/header/header.component';
+
 import { HomePage } from './home/home.page';
 import { ComprasComponent } from './modules/compras/compras.component';
 import { CocinaComponent } from './modules/cocina/cocina.component';
@@ -38,7 +39,6 @@ import { environment } from 'src/environments/environment';
     LoginComponent, 
     RegisterComponent, 
     LoginComponent,
-    BackButtonComponent,
     HomePage,
     ComprasComponent,
     CocinaComponent,
@@ -46,7 +46,8 @@ import { environment } from 'src/environments/environment';
     HistorialComponent,
     ListaComponent,
     RecetasComponent,
-    LavanderiaComponent
+    LavanderiaComponent,
+    HeaderComponent
   ],
   entryComponents: [],
   imports: [
@@ -68,7 +69,7 @@ import { environment } from 'src/environments/environment';
     LoginComponent, 
     RegisterComponent, 
     LoginComponent,
-    BackButtonComponent
+    HeaderComponent
   ]
 })
 export class AppModule {}
